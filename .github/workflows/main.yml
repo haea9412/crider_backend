@@ -95,4 +95,4 @@ jobs:
         git config --global user.email "beatrice3695@gmail.com"
         git config --global user.name "haea9412"
         git commit -am "Update image tag $"
-        git push -u origin frontend
+        git push -u origin feat-ha
