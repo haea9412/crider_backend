@@ -1,7 +1,7 @@
   name: Backend CI / CD
 
     # master 브랜치에 push 되면 workflow 작동
-    on:
+  on:
       push:
         branches:
           - "master"
