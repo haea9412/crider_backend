@@ -17,8 +17,8 @@ on:
 
     # workflow 내에서 사용할 변수 값 저장
 env:
-  AWS_REGION: ap-southeast-2                   
-  ECR_REPOSITORY: "aws-ecr-dev-rive"           
+  AWS_REGION: ap-northeast-2                   
+  ECR_REPOSITORY: "aws-ecr-development-crider-service"           
       
     # permissions:
     #   contents: read
