@@ -156,7 +156,7 @@ jobs:
 
     - name: Update Kubernetes resources
       run: |
-        cd /overlays/prd/
+        cd crider_be_kube/overlays/prd/
         kustomize edit set image ${{ env.ECR_REPOSITORY }}=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPOSITORY }}:latest
         cat kustomization.yaml
 
