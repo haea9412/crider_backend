@@ -112,7 +112,7 @@ on:
 
 env:
   AWS_REGION: ap-southeast-2
-  ECR_REPOSITORY: aws-ecr-dev-rive
+  ECR_REPOSITORY: crider/backend-repo
 
 jobs:
   deploy:

@@ -6,9 +6,10 @@ from sqlalchemy.orm import sessionmaker
 
 # 연결할 db URL
 #SQLALCHEMY_DATABASE_URL = "mysql+pymysql://kitri:rive123@db:3306/rive"
-SQLALCHEMY_DATABASE_URL = "sqlite:////./myapi.db"
+# SQLALCHEMY_DATABASE_URL = "sqlite:////./myapi.db"
 #SQLALCHEMY_DATABASE_URL = "mysql+pymysql://rive:kitri123@rive-db.ctiemqwka664.ap-south-1.rds.amazonaws.com:3306/rive"
-# SQLALCHEMY_DATABASE_URL = "mysql+pymysql://rive:kitri123@rive-db.ctiemqwka664.ap-south-1.rds.amazonaws.com:3306/rive"
+SQLALCHEMY_DATABASE_URL = "mysql+pymysql://admin:password123@rds-crider.czkkeoasq36g.ap-northeast-2.rds.amazonaws.com:3306/criderdb"
+
 # SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:3778@localhost:3306/test002"
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL#, connect_args={"check_same_thread": False} 
