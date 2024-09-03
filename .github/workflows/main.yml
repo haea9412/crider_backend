@@ -144,7 +144,7 @@ jobs:
         file: Dockerfile
         platforms: linux/amd64
         push: true
-        tags: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.REP_NAMESPACE }}/${{ env.ECR_REPOSITORY }}:latest
+        tags: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPOSITORY }}:latest
 
     - name: Checkout for Kustomize repository
       uses: actions/checkout@v2
