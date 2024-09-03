@@ -152,11 +152,11 @@ jobs:
         repository: haea9412/crider_be_kube
         ref: feat-ha
         token: ${{ secrets.ACTION_TOKEN }}
-        path: crider_be-kube
+        path: crider_be_kube
 
     - name: Update Kubernetes resources
       run: |
-        cd crider_be_kube/overlays/prd/
+        cd /overlays/prd/
         kustomize edit set image ${{ env.ECR_REPOSITORY }}=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPOSITORY }}:latest
         cat kustomization.yaml
 
