@@ -156,13 +156,13 @@ jobs:
 
     - name: Update Kubernetes resources
       run: |
-        cd crider_be-kube/overlays/prd/
+        cd crider_be_kube/overlays/prd/
         kustomize edit set image ${{ env.ECR_REPOSITORY }}=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPOSITORY }}:latest
         cat kustomization.yaml
 
     - name: Commit manifest files
       run: |
-        cd crider_be-kube
+        cd crider_be_kube
         git config --global user.email "beatrice3695@gmail.com"
         git config --global user.name "haea9412"
         git add .
