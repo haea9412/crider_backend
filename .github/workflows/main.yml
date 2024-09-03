@@ -112,8 +112,8 @@ on:
 
 env:
   AWS_REGION: ap-northeast-2
-  ECR_REPOSITORY: backend-repo
-  REP_NAMESPACE: crider
+  ECR_REPOSITORY: crider-backend
+  # REP_NAMESPACE: crider
 
 jobs:
   deploy:
@@ -157,7 +157,7 @@ jobs:
     - name: Update Kubernetes resources
       run: |
         cd crider_be-kube/overlays/prd/
-        kustomize edit set image ${{ env.ECR_REPOSITORY }}=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.REP_NAMESPACE }}/${{ env.ECR_REPOSITORY }}:latest
+        kustomize edit set image ${{ env.ECR_REPOSITORY }}=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPOSITORY }}:latest
         cat kustomization.yaml
 
     - name: Commit manifest files
