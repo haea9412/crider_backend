@@ -149,7 +149,7 @@ jobs:
     - name: Checkout for Kustomize repository
       uses: actions/checkout@v2
       with:
-        repository: haea9412/crider_be-kube
+        repository: haea9412/crider_be_kube
         ref: feat-ha
         token: ${{ secrets.ACTION_TOKEN }}
         path: crider_be-kube
