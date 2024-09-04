@@ -111,8 +111,8 @@ on:
   #       default: 'warning'
 
 env:
-  AWS_REGION: ap-northeast-2
-  ECR_REPOSITORY: crider-backend
+  AWS_REGION: ap-southeast-2
+  ECR_REPOSITORY: aws-ecr-crider-service-001
   # REP_NAMESPACE: crider
 
 jobs:
